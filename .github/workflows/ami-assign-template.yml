@@ -16,7 +16,7 @@ on:
       MAKE_DEFAULT_VERSION:
         description: 'Make Default Version (true/false)'
         required: false
-        default: 'true'
+        default: 'false'
 
 permissions:
   id-token: write
@@ -29,5 +29,5 @@ jobs:
       ROLE: "arn:aws:iam::208940048781:role/aws-mastermind-workflow-role"
       TOOLKIT_VERSION: ${{ inputs.TOOLKIT_VERSION || 'default' }}
       REGION: ${{ inputs.REGION || 'us-west-2' }}
-      MAKE_DEFAULT_VERSION: ${{ inputs.MAKE_DEFAULT_VERSION || 'true' }}
+      MAKE_DEFAULT_VERSION: ${{ inputs.MAKE_DEFAULT_VERSION || 'false' }}
       SNAPSHOT_TAGGING: true
